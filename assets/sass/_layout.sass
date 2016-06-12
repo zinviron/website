@@ -1,3 +1,4 @@
+$mobile: new-breakpoint(max-width 840px 4)
 header
   background-color: #1A191A
   .header-wrapper
@@ -8,12 +9,17 @@ main
   +pad()
   .content
     +span-columns(9)
+    +media($mobile)
+      +span-columns(4)
   .sidebar
     +span-columns(3)
-  
+    +media($mobile)
+      +span-columns(4)
+      .block
+      +span-columns(2)
 // Footer
 footer
   background-color: #222
   text-align: center
-  color: #777;
+  color: #777
   padding: 10px
