@@ -6,7 +6,6 @@
 # Icon must end with two \r
 Icon
 
-
 # Thumbnails
 ._*
 
@@ -23,9 +22,6 @@ Temporary Items
 
 ### Jekyll ###
 _site/
-_layouts
-_includes
-css
 .sass-cache/
 .jekyll-metadata
 
