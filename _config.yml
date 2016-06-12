@@ -1,1 +1,6 @@
 # Build settings
+
+markdown: kramdown
+permalink: pretty
+
+exclude: ["node_modules", "sass", "pug", "gulpfile.js", "package.json", "README.md", "CNAME"]

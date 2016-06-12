@@ -1,0 +1,70 @@
+//Front Feature
+.front--feat
+  +outer-container
+  &-left
+    +span-columns(8)
+    &-topcolumn
+      +span-columns(8 of 8)
+      height: 80px
+      background-color: blue
+    &-leftcolumn
+      +span-columns(5 of 8)
+      background-color: pink
+      min-height: 200px
+    &-rightcolumn
+      +span-columns(3 of 8)
+      background-color: red
+      min-height: 200px
+    
+  &-right
+    +span-columns(4)
+    background-color: blue
+    min-height: 200px
+
+// Block
+.block-thumb
+  display: block
+  background:
+    size: cover
+    position: center
+  width: 100%
+  position: relative
+  overflow: hidden
+
+
+.front--feat-left-leftcolumn
+  .block-top
+    .block-thumb
+      min-height: 465px
+  .block-bottom
+    .block-thumb  
+      min-height: 155px
+    
+.front--feat-left-rightcolumn
+  .block-top
+    .block-thumb 
+      min-height: 310px
+  .block-bottom
+    .block-thumb 
+      min-height: 310px
+
+.front--feat-right
+  .block-right
+    .block-thumb
+      min-height: 175px
+      &:hover .block-overlay
+        opacity: 1
+        background-color: red
+        transform: translate(0%, 0%) scale(1)
+    .block-overlay
+      position: absolute
+      display: block
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-color: pink
+      transform: translate(0%, 100%) scale(0.5)
+      transition: all 200ms ease-in-out 
+      opacity: 0
+
