@@ -5,11 +5,17 @@ description:
 paginate: 2
 paginate_path: '/page/:num/'
 
+# SEO
+google_site_verification: 
+
 # Build settings
 markdown: kramdown
 permalink: pretty
 gems:
 - jekyll-paginate
 - jekyll-seo-tag
+- jekyll-feed
+- jekyll-sitemap
+
 include: ['_pages']
 exclude: ['node_modules', 'assets/sass', 'assets/pug', 'gulpfile.js', 'package.json', 'README.md', 'CNAME']
