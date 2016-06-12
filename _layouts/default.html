@@ -1,5 +1,5 @@
-{% include header.html %}<body><header><div class="header-wrapper">{% include nav.html %}</div></header><div class="main"><section class="content">{% if page.layout == 'default' %}
+{% include header.html %}<body itemscope="itemscope" itemtype="http://schema.org/WebPage"><header><div class="header-wrapper">{% include nav.html %}</div></header><main><section class="content">{% if page.layout == 'default' %}
 {%   include post-teaser.html %}
 {% else %}
 {{ content }}
-{% endif %}</section><aside class="sidebar">{% include sidebar.html %}</aside></div>{% include footer.html %}</body>
+{% endif %}</section><aside class="sidebar">{% include sidebar.html %}</aside></main>{% include footer.html %}</body>

@@ -1,1 +1,1 @@
-<div class="block"><h3 class="block-title">Block</h3><ul><li><a href="/">sdfd5</a></li><li><a href="/">sdfd3</a></li><li><a href="/">sdfd2</a></li><li><a href="/">sdfd1</a></li></ul></div>
+{% if site.data.sidebar.link %}<div class="block"><h3 class="block-title">Link</h3><ul>{% for item in site.data.sidebar.link %}<li><a href="{{ item.url }}">{{ item.text }}</a></li>{% endfor %}</ul></div>{% endif %}

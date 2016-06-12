@@ -1,7 +1,9 @@
+|{% if site.data.sidebar.link %}
 .block
-  h3.block-title Block
+  h3.block-title Link
   ul
-    li: a(href='/') sdfd5
-    li: a(href='/') sdfd3
-    li: a(href='/') sdfd2
-    li: a(href='/') sdfd1
+    |{% for item in site.data.sidebar.link %}
+    li: a(href='{{ item.url }}') {{ item.text }}
+    |{% endfor %}
+|{% endif %}
+

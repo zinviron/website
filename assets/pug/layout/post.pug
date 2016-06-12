@@ -2,7 +2,7 @@
 |layout: default
 |---
 | 
-article.post
-  h1.post-title {{ page.title }}
-  p.meta {{ page.date | date: "%b %-d, %Y" }}
-  .post-content {{ content }}
+article.post.hentry
+  h1.post-title.entry-title {{ page.title }}
+  .meta: time.published {{ page.date | date: "%b %-d, %Y" }}
+  .post-content.entry-content {{ content }}

@@ -1,9 +1,9 @@
 |{% include header.html %}
-body
+body(itemscope itemtype="http://schema.org/WebPage")
   header
     .header-wrapper
       |{% include nav.html %}
-  div.main
+  main
     section.content
       |{% if page.layout == 'default' %}
       |{%   include post-teaser.html %}

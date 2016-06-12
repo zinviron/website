@@ -1,7 +1,7 @@
-nav.navbar
+nav.navbar(itemscope itemtype="http://schema.org/SiteNavigationElement")
   a(href='/').brand {{ site.title }}
   ul.nav
-    li.nav-item: a(href='/').nav-link Home
+    li.nav-item: a(href='/' itemprop="url").nav-link Home
     |{% for page in site.pages %} {% if page.title %}
-    li.nav-item: a(href='{{ page.url | prepend: site.baseurl }}').nav-link {{ page.title }}
+    li.nav-item: a(href='{{ page.url | prepend: site.baseurl }}' itemprop="url").nav-link {{ page.title }}
     |{% endif %} {% endfor %}
