@@ -1,0 +1,7 @@
+nav.navbar
+  a(href='/').brand Kingdom Heart
+  ul.nav
+    li.nav-item: a(href='{{ "/" | prepend: site.baseurl }}').nav-link Home
+    |{% for page in site.pages %} {% if page.title %}
+    li.nav-item: a(href='{{ page.url | prepend: site.baseurl }}').nav-link {{ page.title }}
+    |{% endif %} {% endfor %}

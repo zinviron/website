@@ -30,25 +30,25 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 
 // Recompile SASS
 gulp.task('sass', function(){
-  return gulp.src('sass/import.sass')
+  return gulp.src('assets/sass/import.sass')
     .pipe(sass())
     .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
     .pipe(rename('style.css'))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('_site/css'))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('_site/assets/css'))
+    .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({stream:true}));
 });
 
 // Recompile HTML
 gulp.task('pug-layout', function buildHTML() {
-  return gulp.src('pug/layout/*.pug')
+  return gulp.src('assets/pug/layout/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('_layouts'));
 });
 
 gulp.task('pug-include', function buildHTML() {
-  return gulp.src('pug/include/*.pug')
+  return gulp.src('assets/pug/include/*.pug')
   .pipe(pug())
   .pipe(gulp.dest('_includes'));
 });
@@ -67,9 +67,9 @@ gulp.task('browser-sync', ['sass', 'pug-layout', 'pug-include', 'jekyll-rebuild'
 
 // Watch Task
 gulp.task('watch', function() {
-  gulp.watch('sass/**', ['sass']);
+  gulp.watch('assets/sass/**', ['sass']);
   gulp.watch(['*.html', '_layouts/*.html', '_posts/*', '_includes/*'], ['jekyll-rebuild']);
-  gulp.watch('pug/**/*.pug', ['pug-layout', 'pug-include']);
+  gulp.watch('assets/pug/**/*.pug', ['pug-layout', 'pug-include']);
 });
 
 /**

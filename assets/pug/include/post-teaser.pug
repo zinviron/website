@@ -1,0 +1,22 @@
+|{% for post in paginator.posts %}
+article.post
+  h2.post-title
+    a(href='{{ post.url }}').link {{ post.title }}
+  p.meta {{ post.date | date: "%b %-d, %Y" }}
+  .post-content {{post.excerpt}}
+|{% endfor %}
+
+|{% if paginator.total_pages > 1 %}
+ul.pagination
+  |{% if paginator.previous_page %}
+  li: a(href='{{ paginator.previous_page_path }}').previous &laquo; Previous
+  |{% else %}
+  li: span.previous &laquo; Previous
+  |{% endif %}
+  li: span.page_number Page: {{ paginator.page }} of {{ paginator.total_pages }}
+  |{% if paginator.next_page %}
+  li: a(href='{{ paginator.next_page_path }}').next Next &raquo;
+  |{% else %}
+  li: span.previous Next &raquo;
+  |{% endif %}
+  |{% endif %}

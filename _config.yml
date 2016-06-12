@@ -3,11 +3,12 @@ title: My Website
 email: 
 description: 
 paginate: 2
-paginate_path: "/page/:num/"
+paginate_path: '/page/:num/'
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 gems:
 - jekyll-paginate
-exclude: ["node_modules", "sass", "pug", "gulpfile.js", "package.json", "README.md", "CNAME"]
+include: ['_pages']
+exclude: ['node_modules', 'assets/sass', 'assets/pug', 'gulpfile.js', 'package.json', 'README.md', 'CNAME']

@@ -1,0 +1,15 @@
+|{% include header.html %}
+body
+  header
+    .header-wrapper
+      |{% include nav.html %}
+  div.main
+    section.content
+      |{% if page.layout == 'default' %}
+      |{%   include post-teaser.html %}
+      |{% else %}
+      | {{ content }}
+      |{% endif %}
+    aside.sidebar
+      |{% include sidebar.html %}
+  |{% include footer.html %}

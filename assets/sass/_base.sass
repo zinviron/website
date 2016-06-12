@@ -1,4 +1,9 @@
 // Base
+::selection
+  background: $selection-background
+  color: $selection-color
+  text-shadow: none
+
 body
   color: $base-font-color
   font-family: $base-font-family
@@ -20,13 +25,13 @@ h6
 p
   margin: 0 0 $small-spacing
 a
-  color: $action-color
+  color: $link-color
   text-decoration: none
   transition: color $base-duration $base-timing
   &:active,
   &:focus,
   &:hover
-    color: shade($action-color, 25%)
+    color: shade($link-color, 25%)
   
 // List Style
 ul,
