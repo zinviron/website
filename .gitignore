@@ -23,6 +23,9 @@ Temporary Items
 
 ### Jekyll ###
 _site/
+_layouts
+_includes
+css
 .sass-cache/
 .jekyll-metadata
 

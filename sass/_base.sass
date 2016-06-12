@@ -1,9 +1,12 @@
+// Base
 body
   color: $base-font-color
   font-family: $base-font-family
   font-size: rem($base-font-size)
   line-height: $base-line-height
   background-color: $body-bg
+  
+// Typography
 h1,
 h2,
 h3,
@@ -24,3 +27,10 @@ a
   &:focus,
   &:hover
     color: shade($action-color, 25%)
+  
+// List Style
+ul,
+ol
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
